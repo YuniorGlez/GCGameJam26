@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge, Palette, Music } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge, Palette, Music, Type, Mic, HelpCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -222,7 +222,7 @@ export default function Home() {
             <h2 className="text-4xl font-heading text-white border-b-4 border-island-magenta w-fit pr-12 pb-2">
               FASE 5: CIERRE Y PITCH
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="/sos">
                 <ModuleCard
                   title="S.O.S. Mentores"
@@ -239,14 +239,30 @@ export default function Home() {
                   accent="island-cyan"
                 />
               </Link>
-              <div className="opacity-50 grayscale">
+              <Link href="/bautizo-juego">
+                <ModuleCard
+                  title="Bautizo de Juego"
+                  description="Nombres creativos para tu obra maestra."
+                  icon={<Type className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </Link>
+              <Link href="/guion-pitch">
                 <ModuleCard
                   title="Guion del Pitch"
                   description="Estructura tu presentación final."
-                  icon={<Zap className="w-6 h-6" />}
+                  icon={<Mic className="w-6 h-6" />}
                   accent="island-lime"
                 />
-              </div>
+              </Link>
+              <Link href="/interrogatorio-jurado">
+                <ModuleCard
+                  title="Interrogatorio del Jurado"
+                  description="Simulación de preguntas difíciles."
+                  icon={<HelpCircle className="w-6 h-6" />}
+                  accent="island-cyan"
+                />
+              </Link>
             </div>
           </section>
         </div>

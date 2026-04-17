@@ -32,9 +32,9 @@
 ### Estética y Finalización
 - [x] **Alquimia de Colores**: Paletas según sentimiento.
 - [x] **Diccionario de Sonidos**: Keywords para bancos de SFX.
-- [ ] **Bautizo de Juego**: Naming creativo.
-- [ ] **Guion del Pitch**: Estructura de 2 minutos.
-- [ ] **Interrogatorio del Jurado**: Simulación de preguntas difíciles.
+- [x] **Bautizo de Juego**: Naming creativo.
+- [x] **Guion del Pitch**: Estructura de 2 minutos.
+- [x] **Interrogatorio del Jurado**: Simulación de preguntas difíciles.
 - [ ] **Caza-Capturas**: Guía visual para Itch.io.
 - [ ] **Resumen para la Entrega**: De logs sucios a texto pro.
 
