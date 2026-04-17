@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BookOpen, ArrowLeft, Plus, Trash2, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft, Plus, Trash2, CheckCircle2, XCircle } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 

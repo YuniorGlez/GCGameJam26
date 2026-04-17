@@ -11,8 +11,8 @@
 *(Nombres simplificados y enfocados a Jammers)*
 
 ### Ideación y Diseño
-- [ ] **"¿Y si además...?"**: Expansión de ideas core.
-- [ ] **Mezcla de Géneros**: Conceptos híbridos y cámara.
+- [x] **"¿Y si además...?"**: Expansión de ideas core.
+- [x] **Mezcla de Géneros**: Conceptos híbridos y cámara.
 - [ ] **El Giro Inesperado**: Twist a mecánicas clásicas.
 - [ ] **Generador de "Limbo"**: Resolución de dudas entre ideas.
 - [ ] **Inspiración por Restricción**: Forzar creatividad con límites.

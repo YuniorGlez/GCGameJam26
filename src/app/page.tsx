@@ -53,14 +53,14 @@ export default function Home() {
                   accent="island-magenta"
                 />
               </Link>
-              <div className="opacity-50 grayscale">
+              <Link href="/mezcla-generos">
                 <ModuleCard
                   title="Mezcla de Géneros"
-                  description="Próximamente..."
+                  description="Crea conceptos híbridos rompedores para tu prototipo."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-lime"
                 />
-              </div>
+              </Link>
             </div>
           </section>
 

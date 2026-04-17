@@ -50,10 +50,10 @@ export default function YSiAdemasPage() {
 
       <section className="space-y-4">
         <h1 className="text-4xl font-heading text-white">
-          "¿Y si <span className="text-island-magenta">además...</span>?"
+          &quot;¿Y si <span className="text-island-magenta">además...</span>?&quot;
         </h1>
         <p className="text-foreground/60 font-body border-l-2 border-island-magenta pl-4">
-          La técnica definitiva para cuando tienes una base sólida pero te falta ese "algo" especial. 
+          La técnica definitiva para cuando tienes una base sólida pero te falta ese &quot;algo&quot; especial. 
           Expande tu núcleo sin perder el foco.
         </p>
       </section>

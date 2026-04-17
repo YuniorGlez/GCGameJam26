@@ -97,7 +97,7 @@ export default function BrainstormPage() {
                 <h3 className="text-xl font-heading text-white">{concept.title}</h3>
               </div>
               <div className="space-y-2">
-                <p className="text-sm font-body text-foreground/80 italic">\"{concept.hook}\"</p>
+                <p className="text-sm font-body text-foreground/80 italic">&quot;{concept.hook}&quot;</p>
                 <div className="pt-2 border-t border-white/5">
                   <span className="text-[10px] font-heading text-island-orange uppercase tracking-wider">Mecánica Core</span>
                   <p className="text-xs font-body text-foreground/60">{concept.mechanic}</p>
