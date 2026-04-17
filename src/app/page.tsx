@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -26,46 +26,101 @@ export default function Home() {
         </section>
 
         {/* Main UI */}
-        <div className="w-full max-w-4xl space-y-12">
+        <div className="w-full max-w-5xl space-y-16">
           <div className="glass-panel p-8 rounded-2xl neon-glow-cyan">
             <Countdown />
           </div>
 
-          {/* Quick Modules */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/brainstorm">
-              <ModuleCard
-                title="Arranque Explosivo"
-                description="Brainstorming de conceptos en < 10s alineados con el tema."
-                icon={<Zap className="w-6 h-6" />}
-                accent="island-lime"
-              />
-            </Link>
-            <Link href="/roadmap">
-              <ModuleCard
-                title="Roadmap 48h"
-                description="Calendario de hitos críticos y feature freeze."
-                icon={<Map className="w-6 h-6" />}
-                accent="island-magenta"
-              />
-            </Link>
-            <Link href="/sos">
-              <ModuleCard
-                title="S.O.S. Mentores"
-                description="Prepara un resumen del problema para los mentores."
-                icon={<LifeBuoy className="w-6 h-6" />}
-                accent="island-cyan"
-              />
-            </Link>
-            <Link href="/logs">
-              <ModuleCard
-                title="GDD Logs"
-                description="Historial de decisiones y mecánicas descartadas."
-                icon={<BookOpen className="w-6 h-6" />}
-                accent="island-lime"
-              />
-            </Link>
-          </div>
+          {/* Category: Ideación */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-heading text-island-cyan flex items-center gap-3">
+              <Zap className="w-6 h-6" /> Fase 1: Ideación e Impulso
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link href="/brainstorm">
+                <ModuleCard
+                  title="Arranque Explosivo"
+                  description="Transforma el tema de la Jam en conceptos viables."
+                  icon={<Sparkles className="w-6 h-6" />}
+                  accent="island-cyan"
+                />
+              </Link>
+              <Link href="/y-si-ademas">
+                <ModuleCard
+                  title="¿Y si además...?"
+                  description="Expande tu núcleo sin perder el foco del MVP."
+                  icon={<PlusCircle className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </Link>
+              <div className="opacity-50 grayscale">
+                <ModuleCard
+                  title="Mezcla de Géneros"
+                  description="Próximamente..."
+                  icon={<Zap className="w-6 h-6" />}
+                  accent="island-lime"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Category: Gestión */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-heading text-island-lime flex items-center gap-3">
+              <Map className="w-6 h-6" /> Fase 2: Alcance y Realidad
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Link href="/roadmap">
+                <ModuleCard
+                  title="Roadmap 48h"
+                  description="Cronograma crítico y feature freeze."
+                  icon={<Clock className="w-6 h-6" />}
+                  accent="island-lime"
+                />
+              </Link>
+              <div className="opacity-50 grayscale">
+                <ModuleCard
+                  title="Tijeretazo Maestro"
+                  description="Próximamente..."
+                  icon={<Zap className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Category: Soporte */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-heading text-island-magenta flex items-center gap-3">
+              <LifeBuoy className="w-6 h-6" /> Fase 3: Soporte y Pitch
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link href="/sos">
+                <ModuleCard
+                  title="S.O.S. Mentores"
+                  description="Resume tu problema para el mentor."
+                  icon={<LifeBuoy className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </Link>
+              <Link href="/logs">
+                <ModuleCard
+                  title="GDD Logs"
+                  description="Historial de decisiones críticas."
+                  icon={<BookOpen className="w-6 h-6" />}
+                  accent="island-cyan"
+                />
+              </Link>
+              <div className="opacity-50 grayscale">
+                <ModuleCard
+                  title="Guion del Pitch"
+                  description="Próximamente..."
+                  icon={<Zap className="w-6 h-6" />}
+                  accent="island-lime"
+                />
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
