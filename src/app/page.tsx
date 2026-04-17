@@ -78,14 +78,14 @@ export default function Home() {
                   accent="island-lime"
                 />
               </Link>
-              <div className="opacity-50 grayscale">
+              <Link href="/giro-inesperado">
                 <ModuleCard
-                  title="Tijeretazo Maestro"
-                  description="Próximamente..."
+                  title="El Giro Inesperado"
+                  description="Añade una regla disruptiva para destacar."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-magenta"
                 />
-              </div>
+              </Link>
             </div>
           </section>
 
