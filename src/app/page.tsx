@@ -1,65 +1,107 @@
-import Image from "next/image";
+import { Countdown } from "@/components/ui/Countdown";
+import { Zap, Map, LifeBuoy, BookOpen } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="container mx-auto px-4 py-12 flex flex-col items-center min-h-screen">
+      {/* Hero Section */}
+      <section className="text-center mb-16 space-y-6 max-w-3xl">
+        <div className="inline-block px-3 py-1 bg-island-blue/20 border border-island-blue/50 rounded-full text-island-neon text-xs font-heading mb-4">
+          GRAN CANARIA GAME ISLAND JAM 2026
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+        <h1 className="text-5xl md:text-7xl font-heading leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-island-neon">
+          Island Jam <br /> <span className="text-island-orange text-shadow-glow">Copilot</span>
+        </h1>
+        <p className="text-foreground/70 font-body text-lg">
+          IA Multimodal para equipos de alto rendimiento. Optimizado para el crunch de 50 horas.
+        </p>
+      </section>
+
+      {/* Main UI */}
+      <div className="w-full max-w-4xl space-y-12">
+        <Countdown />
+
+        {/* Quick Modules */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Link href="/brainstorm">
+            <ModuleCard
+              title="Arranque Explosivo"
+              description="Brainstorming de conceptos en < 10s alineados con el tema."
+              icon={<Zap className="w-6 h-6" />}
+              accent="island-neon"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </Link>
+          <Link href="/roadmap">
+            <ModuleCard
+              title="Roadmap 50h"
+              description="Calendario de hitos críticos y feature freeze."
+              icon={<Map className="w-6 h-6" />}
+              accent="island-orange"
+            />
+          </Link>
+          <Link href="/sos">
+            <ModuleCard
+              title="S.O.S. Mentores"
+              description="Prepara un resumen del problema para los mentores."
+              icon={<LifeBuoy className="w-6 h-6" />}
+              accent="island-blue"
+            />
+          </Link>
+          <Link href="/logs">
+            <ModuleCard
+              title="GDD Logs"
+              description="Historial de decisiones y mecánicas descartadas."
+              icon={<BookOpen className="w-6 h-6" />}
+              accent="island-neon"
+            />
+          </Link>
         </div>
-      </main>
+      </div>
+    </main>
+  );
+}
+
+function ModuleCard({
+  title,
+  description,
+  icon,
+  accent,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  accent: "island-neon" | "island-orange" | "island-blue";
+}) {
+  const accentClasses: Record<string, string> = {
+    "island-neon": "text-island-neon",
+    "island-orange": "text-island-orange",
+    "island-blue": "text-island-blue",
+  };
+
+  const bgClasses: Record<string, string> = {
+    "island-neon": "bg-island-neon/10",
+    "island-orange": "bg-island-orange/10",
+    "island-blue": "bg-island-blue/10",
+  };
+
+  const accentClass = accentClasses[accent];
+  const accentBgClass = bgClasses[accent];
+
+  return (
+    <div className="group relative p-6 bg-island-dark/40 border border-white/10 rounded-xl hover:border-island-neon/50 transition-all cursor-pointer overflow-hidden h-full">
+      <div className={`absolute -top-4 -right-4 p-4 opacity-5 group-hover:opacity-20 transition-all ${accentClass} transform group-hover:scale-110`}>
+        {icon}
+      </div>
+      <div className="relative z-10 space-y-3">
+        <div className={`p-3 w-fit rounded-lg ${accentBgClass} ${accentClass}`}>
+          {icon}
+        </div>
+        <h3 className="text-xl font-heading text-white">{title}</h3>
+        <p className="text-sm text-foreground/60 font-body leading-relaxed">
+          {description}
+        </p>
+      </div>
     </div>
   );
 }
