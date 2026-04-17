@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -124,6 +124,14 @@ export default function Home() {
                   description="Dificultad técnica vs tiempo. ¿Es factible tu idea?"
                   icon={<AlertTriangle className="w-6 h-6" />}
                   accent="island-lime"
+                />
+              </Link>
+              <Link href="/lista-compra-assets">
+                <ModuleCard
+                  title="Lista de la Compra"
+                  description="Assets de arte y sonido esenciales para tu MVP."
+                  icon={<ShoppingCart className="w-6 h-6" />}
+                  accent="island-cyan"
                 />
               </Link>
             </div>
