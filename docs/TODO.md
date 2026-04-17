@@ -35,8 +35,8 @@
 - [x] **Bautizo de Juego**: Naming creativo.
 - [x] **Guion del Pitch**: Estructura de 2 minutos.
 - [x] **Interrogatorio del Jurado**: Simulación de preguntas difíciles.
-- [ ] **Caza-Capturas**: Guía visual para Itch.io.
-- [ ] **Resumen para la Entrega**: De logs sucios a texto pro.
+- [x] **Caza-Capturas**: Guía visual para Itch.io.
+- [x] **Resumen para la Entrega**: De logs sucios a texto pro.
 
 ## 🐛 Bug Fixes & Refinement
 - [ ] Optimizar tiempos de respuesta de la API.

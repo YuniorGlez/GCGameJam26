@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge, Palette, Music, Type, Mic, HelpCircle } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge, Palette, Music, Type, Mic, HelpCircle, Camera, FileText } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -261,6 +261,22 @@ export default function Home() {
                   description="Simulación de preguntas difíciles."
                   icon={<HelpCircle className="w-6 h-6" />}
                   accent="island-cyan"
+                />
+              </Link>
+              <Link href="/caza-capturas">
+                <ModuleCard
+                  title="Caza-Capturas"
+                  description="Guía para las capturas más impactantes."
+                  icon={<Camera className="w-6 h-6" />}
+                  accent="island-cyan"
+                />
+              </Link>
+              <Link href="/resumen-entrega">
+                <ModuleCard
+                  title="Resumen para la Entrega"
+                  description="Transforma notas en descripción profesional."
+                  icon={<FileText className="w-6 h-6" />}
+                  accent="island-magenta"
                 />
               </Link>
             </div>
