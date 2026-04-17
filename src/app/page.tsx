@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge, Palette, Music } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -192,10 +192,35 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Category: Estética */}
+          <section className="space-y-10">
+            <h2 className="text-4xl font-heading text-white border-b-4 border-island-lime w-fit pr-12 pb-2">
+              FASE 4: ESTÉTICA Y ASSETS
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Link href="/alquimia-colores">
+                <ModuleCard
+                  title="Alquimia de Colores"
+                  description="Generador de paletas basadas en sentimientos."
+                  icon={<Palette className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </Link>
+              <Link href="/diccionario-sonidos">
+                <ModuleCard
+                  title="Diccionario de Sonidos"
+                  description="Keywords para buscar SFX internacionales."
+                  icon={<Music className="w-6 h-6" />}
+                  accent="island-lime"
+                />
+              </Link>
+            </div>
+          </section>
+
           {/* Category: Soporte */}
           <section className="space-y-10">
             <h2 className="text-4xl font-heading text-white border-b-4 border-island-magenta w-fit pr-12 pb-2">
-              FASE 4: PITCH
+              FASE 5: CIERRE Y PITCH
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link href="/sos">

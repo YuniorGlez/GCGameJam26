@@ -30,8 +30,8 @@
 - [x] **Checklist de Rendimiento**: Optimización para Web builds.
 
 ### Estética y Finalización
-- [ ] **Buscador de Colores**: Paletas según sentimiento.
-- [ ] **Diccionario de Sonidos**: Keywords para bancos de SFX.
+- [x] **Alquimia de Colores**: Paletas según sentimiento.
+- [x] **Diccionario de Sonidos**: Keywords para bancos de SFX.
 - [ ] **Bautizo de Juego**: Naming creativo.
 - [ ] **Guion del Pitch**: Estructura de 2 minutos.
 - [ ] **Interrogatorio del Jurado**: Simulación de preguntas difíciles.
