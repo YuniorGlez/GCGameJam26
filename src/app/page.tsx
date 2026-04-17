@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -137,10 +137,43 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Category: Técnico */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-heading text-island-cyan flex items-center gap-3">
+              <Code className="w-6 h-6" /> Fase 3: Desarrollo y Atascos
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/traductor-logica">
+                <ModuleCard
+                  title="Traductor a Lógica"
+                  description="De lenguaje humano a pseudocódigo estructurado."
+                  icon={<Code className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </Link>
+              <div className="opacity-50 grayscale">
+                <ModuleCard
+                  title="Diccionario Motores"
+                  description="Equivalencias Unity / Godot / Unreal."
+                  icon={<Zap className="w-6 h-6" />}
+                  accent="island-lime"
+                />
+              </div>
+              <div className="opacity-50 grayscale">
+                <ModuleCard
+                  title="Pato de Goma"
+                  description="Chat de debug por auto-explicación."
+                  icon={<Zap className="w-6 h-6" />}
+                  accent="island-cyan"
+                />
+              </div>
+            </div>
+          </section>
+
           {/* Category: Soporte */}
           <section className="space-y-6">
             <h2 className="text-2xl font-heading text-island-magenta flex items-center gap-3">
-              <LifeBuoy className="w-6 h-6" /> Fase 3: Soporte y Pitch
+              <LifeBuoy className="w-6 h-6" /> Fase 4: Soporte y Pitch
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link href="/sos">

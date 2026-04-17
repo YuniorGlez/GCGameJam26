@@ -47,11 +47,12 @@ Todo el código debe estar estrictamente tipado. No se permiten hacks de tipos.
 - **Acentos:** Neon Magenta (`#E52E8A`), Cyan (`#00B5E2`), Lime (`#8DC63F`).
 - **Fuentes:** `Orbitron` para headings, `JetBrains Mono` para cuerpo.
 
-### 3. Workflow de Validación
-Cada cambio debe ser validado con:
-1. `bun x tsc --noEmit`
-2. Revisión de contraste (4.5:1 min).
-3. Verificación de responsividad (Mobile first).
+### 3. Workflow de Validación (Protocolo de Subagentes)
+Cada tarea se considera finalizada SOLO tras:
+1. **Compilación:** `bun x tsc --noEmit` debe dar 0 errores.
+2. **Git:** Realizar `git add .`, `git commit -m "feat/fix: ..."` y `git push`.
+3. **Documentación:** Dejar un resumen claro de los cambios realizados y archivos modificados para que el siguiente subagente pueda continuar sin fricción.
+4. **Verificación Visual:** Comprobación de contraste (4.5:1 min) y responsividad.
 
 ---
 
