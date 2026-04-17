@@ -15,7 +15,7 @@
 - [x] **Mezcla de Géneros**: Conceptos híbridos y cámara.
 - [x] **El Giro Inesperado**: Twist a mecánicas clásicas.
 - [x] **Generador de "Limbo"**: Resolución de dudas entre ideas.
-- [ ] **Inspiración por Restricción**: Forzar creatividad con límites.
+- [x] **Inspiración por Restricción**: Forzar creatividad con límites.
 
 ### Gestión y Alcance
 - [ ] **Tijeretazo Maestro**: Qué eliminar cuando no hay tiempo.

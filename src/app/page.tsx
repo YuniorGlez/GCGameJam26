@@ -69,6 +69,14 @@ export default function Home() {
                   accent="island-cyan"
                 />
               </Link>
+              <Link href="/inspiracion-restriccion">
+                <ModuleCard
+                  title="Inspiración x Restricción"
+                  description="Desbloquea tu creatividad forzando límites de diseño."
+                  icon={<Zap className="w-6 h-6" />}
+                  accent="island-magenta"
+                />
+              </Link>
             </div>
           </section>
 
