@@ -17,13 +17,13 @@ export const BackgroundDecorations = () => {
           key={i}
           className="pixel-square"
           style={{
-            width: Math.random() * 30 + 5,
-            height: Math.random() * 30 + 5,
+            width: Math.random() * 150 + 25, // x5 size (25px to 175px)
+            height: Math.random() * 150 + 25,
             left: `${Math.random() * 100}%`,
-            top: `-10%`, // Start above screen
+            top: `-20%`, // Start higher up because they are larger
             backgroundColor: i % 4 === 0 ? "#E52E8A" : i % 4 === 1 ? "#00B5E2" : i % 4 === 2 ? "#8DC63F" : "#FACC15",
-            opacity: Math.random() * 0.1 + 0.05, // Very subtle since it's on top
-            borderRadius: i % 8 === 0 ? "50%" : "1px",
+            opacity: Math.random() * 0.08 + 0.02, // Slightly lower opacity since they are huge
+            borderRadius: i % 8 === 0 ? "50%" : "2px",
           }}
           animate={{
             y: ["0vh", "110vh"], // Fall all the way down
