@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
             <h2 className="text-2xl font-heading text-island-cyan flex items-center gap-3">
               <Zap className="w-6 h-6" /> Fase 1: Ideación e Impulso
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link href="/brainstorm">
                 <ModuleCard
                   title="Arranque Explosivo"
@@ -59,6 +59,14 @@ export default function Home() {
                   description="Crea conceptos híbridos rompedores para tu prototipo."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-lime"
+                />
+              </Link>
+              <Link href="/generador-limbo">
+                <ModuleCard
+                  title="Generador de Limbo"
+                  description="Resuelve dudas entre ideas y encuentra el punto medio."
+                  icon={<Scale className="w-6 h-6" />}
+                  accent="island-cyan"
                 />
               </Link>
             </div>
