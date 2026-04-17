@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -173,14 +173,14 @@ export default function Home() {
                   accent="island-lime"
                 />
               </Link>
-              <div className="opacity-50 grayscale">
+              <Link href="/pato-goma">
                 <ModuleCard
                   title="Pato de Goma"
                   description="Chat de debug por auto-explicación."
-                  icon={<Zap className="w-6 h-6" />}
+                  icon={<MessageSquare className="w-6 h-6" />}
                   accent="island-cyan"
                 />
-              </div>
+              </Link>
             </div>
           </section>
 

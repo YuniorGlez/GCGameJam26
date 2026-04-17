@@ -26,7 +26,7 @@
 ### Técnico y Atascos
 - [x] **Traductor a Lógica**: De lenguaje humano a pseudocódigo.
 - [x] **Diccionario entre Motores**: Equivalencias Unity/Godot/Unreal.
-- [ ] **El Pato de Goma Interactivo**: Chat de debug por auto-explicación.
+- [x] **El Pato de Goma Interactivo**: Chat de debug por auto-explicación.
 - [ ] **Checklist de Rendimiento**: Optimización para Web builds.
 
 ### Estética y Finalización
