@@ -11,8 +11,8 @@ export const BackgroundDecorations = () => {
         <div className="absolute bottom-0 right-0 w-[90%] h-[90%] bg-[#00B5E2]/30 blur-[150px] translate-x-1/4 translate-y-1/4" />
       </div>
 
-      {/* Falling Pixel Squares with "Gravity" - Disabled on mobile */}
-      <div className="hidden md:block">
+      {/* Falling Pixel Squares with "Gravity" - TEMPORARILY DISABLED for screenshots */}
+      <div className="hidden">
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
@@ -41,9 +41,9 @@ export const BackgroundDecorations = () => {
         ))}
       </div>
 
-      {/* Static but overlayed prominent elements - Hidden on mobile for performance and clarity */}
-      <div className="hidden md:block absolute top-[15%] right-[22%] w-16 h-16 bg-[#FACC15] opacity-10 rotate-12 blur-[1px]" />
-      <div className="hidden md:block absolute bottom-[25%] left-[28%] w-12 h-12 bg-[#8DC63F] opacity-10 -rotate-12 blur-[1px]" />
+      {/* Static but overlayed prominent elements - TEMPORARILY DISABLED for screenshots */}
+      <div className="hidden absolute top-[15%] right-[22%] w-16 h-16 bg-[#FACC15] opacity-10 rotate-12 blur-[1px]" />
+      <div className="hidden absolute bottom-[25%] left-[28%] w-12 h-12 bg-[#8DC63F] opacity-10 -rotate-12 blur-[1px]" />
     </div>
   );
 };
