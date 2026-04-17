@@ -7,36 +7,50 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden">
       <div className="container mx-auto px-4 py-12 flex flex-col items-center relative z-10">
         {/* Hero Section */}
-        <section className="text-center mb-16 space-y-8 max-w-4xl">
-          <div className="inline-block px-4 py-1.5 bg-island-cyan/10 border border-island-cyan/30 rounded-full text-island-cyan text-xs font-heading mb-4 neon-glow-cyan tracking-widest animate-pulse">
-            GRAN CANARIA GAME ISLAND JAM 2026
+        <section className="text-center mb-16 space-y-0 max-w-5xl relative">
+          <div className="text-white text-3xl md:text-5xl font-heading mb-0 tracking-[0.2em] drop-shadow-md">
+            GRAN CANARIA
           </div>
           
-          <div className="relative">
-            <h1 className="text-6xl md:text-9xl font-heading leading-none neon-pipe-text tracking-tighter">
-              ISLAND JAM<br />
-              <span className="text-island-lime italic block mt-2 drop-shadow-lg">COPILOT</span>
+          <div className="relative py-4">
+            <h1 className="text-7xl md:text-[10rem] font-heading leading-[0.8] neon-pipe-text tracking-tighter">
+              GAME<br />
+              ISLAND
             </h1>
+            <div className="text-4xl md:text-7xl font-heading glitch-text mt-4 tracking-[0.5em] text-white">
+              JAM
+            </div>
           </div>
 
-          <p className="text-xl md:text-2xl font-body text-white/80 max-w-2xl mx-auto border-y border-white/10 py-6 px-4 bg-white/5 backdrop-blur-sm">
-            ¿Eres capaz de crear un videojuego en <span className="text-island-magenta font-bold underline decoration-island-magenta/50">48 horas</span>? <br/>
-            <span className="text-island-cyan text-base md:text-lg mt-2 block opacity-70 italic tracking-wide">IA Multimodal para equipos de alto rendimiento.</span>
-          </p>
+          {/* The White Date Bar from the poster */}
+          <div className="w-full bg-white py-4 md:py-8 my-12 transform -rotate-1 shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
+              <div className="text-4xl md:text-7xl font-heading text-[#0B1E4D] tracking-tighter">
+                17 <span className="text-island-cyan">+</span> 18 <span className="text-island-magenta">+</span> 19
+              </div>
+              <div className="text-3xl md:text-6xl font-heading text-island-lime">
+                ABRIL 2026
+              </div>
+            </div>
+          </div>
+
+          <div className="text-2xl md:text-5xl font-heading text-white italic tracking-tight drop-shadow-xl mt-8">
+            ¿Eres capaz de crear un videojuego en <span className="text-island-lime neon-text-lime">48 horas</span>?
+          </div>
         </section>
 
         {/* Main UI */}
-        <div className="w-full max-w-5xl space-y-16">
-          <div className="glass-panel p-8 rounded-2xl neon-glow-cyan">
+        <div className="w-full max-w-5xl space-y-24">
+          <div className="poster-card p-12 rounded-none transform rotate-1">
             <Countdown />
           </div>
 
           {/* Category: Ideación */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-heading text-island-cyan flex items-center gap-3">
-              <Zap className="w-6 h-6" /> Fase 1: Ideación e Impulso
+          <section className="space-y-10">
+            <h2 className="text-4xl font-heading text-white border-b-4 border-island-cyan w-fit pr-12 pb-2">
+              FASE 1: IDEACIÓN
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               <Link href="/brainstorm">
                 <ModuleCard
                   title="Arranque Explosivo"
@@ -56,7 +70,7 @@ export default function Home() {
               <Link href="/mezcla-generos">
                 <ModuleCard
                   title="Mezcla de Géneros"
-                  description="Crea conceptos híbridos rompedores para tu prototipo."
+                  description="Crea conceptos híbridos rompedores."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-lime"
                 />
@@ -64,7 +78,7 @@ export default function Home() {
               <Link href="/generador-limbo">
                 <ModuleCard
                   title="Generador de Limbo"
-                  description="Resuelve dudas entre ideas y encuentra el punto medio."
+                  description="Resuelve dudas y encuentra el punto medio."
                   icon={<Scale className="w-6 h-6" />}
                   accent="island-cyan"
                 />
@@ -72,7 +86,7 @@ export default function Home() {
               <Link href="/inspiracion-restriccion">
                 <ModuleCard
                   title="Inspiración x Restricción"
-                  description="Desbloquea tu creatividad forzando límites de diseño."
+                  description="Forzando límites de diseño."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-magenta"
                 />
@@ -81,11 +95,11 @@ export default function Home() {
           </section>
 
           {/* Category: Gestión */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-heading text-island-lime flex items-center gap-3">
-              <Map className="w-6 h-6" /> Fase 2: Alcance y Realidad
+          <section className="space-y-10">
+            <h2 className="text-4xl font-heading text-white border-b-4 border-island-lime w-fit pr-12 pb-2">
+              FASE 2: ALCANCE
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="/roadmap">
                 <ModuleCard
                   title="Roadmap 48h"
@@ -97,7 +111,7 @@ export default function Home() {
               <Link href="/arquitecto-mvp">
                 <ModuleCard
                   title="Arquitecto del MVP"
-                  description="Las 3 mecánicas sagradas. Tu núcleo innegociable."
+                  description="Las 3 mecánicas sagradas innegociables."
                   icon={<Hammer className="w-6 h-6" />}
                   accent="island-magenta"
                 />
@@ -105,7 +119,7 @@ export default function Home() {
               <Link href="/giro-inesperado">
                 <ModuleCard
                   title="El Giro Inesperado"
-                  description="Añade una regla disruptiva para destacar."
+                  description="Regla disruptiva para destacar."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-magenta"
                 />
@@ -113,7 +127,7 @@ export default function Home() {
               <Link href="/tijeretazo-maestro">
                 <ModuleCard
                   title="Tijeretazo Maestro"
-                  description="Qué eliminar cuando no hay tiempo. Prioridad absoluta."
+                  description="Qué eliminar cuando no hay tiempo."
                   icon={<Scissors className="w-6 h-6" />}
                   accent="island-cyan"
                 />
@@ -121,7 +135,7 @@ export default function Home() {
               <Link href="/medidor-marrones">
                 <ModuleCard
                   title="Medidor de Marrones"
-                  description="Dificultad técnica vs tiempo. ¿Es factible tu idea?"
+                  description="¿Es realmente factible tu idea?"
                   icon={<AlertTriangle className="w-6 h-6" />}
                   accent="island-lime"
                 />
@@ -129,7 +143,7 @@ export default function Home() {
               <Link href="/lista-compra-assets">
                 <ModuleCard
                   title="Lista de la Compra"
-                  description="Assets de arte y sonido esenciales para tu MVP."
+                  description="Assets de arte y sonido esenciales."
                   icon={<ShoppingCart className="w-6 h-6" />}
                   accent="island-cyan"
                 />
@@ -137,16 +151,16 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Category: Técnico */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-heading text-island-cyan flex items-center gap-3">
-              <Code className="w-6 h-6" /> Fase 3: Desarrollo y Atascos
+          {/* Category: Desarrollo */}
+          <section className="space-y-10">
+            <h2 className="text-4xl font-heading text-white border-b-4 border-island-cyan w-fit pr-12 pb-2">
+              FASE 3: TÉCNICO
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="/traductor-logica">
                 <ModuleCard
                   title="Traductor a Lógica"
-                  description="De lenguaje humano a pseudocódigo estructurado."
+                  description="De lenguaje humano a pseudocódigo."
                   icon={<Code className="w-6 h-6" />}
                   accent="island-magenta"
                 />
@@ -171,9 +185,9 @@ export default function Home() {
           </section>
 
           {/* Category: Soporte */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-heading text-island-magenta flex items-center gap-3">
-              <LifeBuoy className="w-6 h-6" /> Fase 4: Soporte y Pitch
+          <section className="space-y-10">
+            <h2 className="text-4xl font-heading text-white border-b-4 border-island-magenta w-fit pr-12 pb-2">
+              FASE 4: PITCH
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link href="/sos">
@@ -195,7 +209,7 @@ export default function Home() {
               <div className="opacity-50 grayscale">
                 <ModuleCard
                   title="Guion del Pitch"
-                  description="Próximamente..."
+                  description="Estructura tu presentación final."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-lime"
                 />
@@ -242,16 +256,16 @@ function ModuleCard({
   const borderClass = borderClasses[accent];
 
   return (
-    <div className={`group relative p-6 glass-panel rounded-xl ${borderClass} transition-all cursor-pointer overflow-hidden h-full`}>
-      <div className={`absolute -top-4 -right-4 p-4 opacity-5 group-hover:opacity-20 transition-all ${accentClass} transform group-hover:scale-110`}>
+    <div className={`group relative p-8 poster-card rounded-none ${borderClass} transition-all cursor-pointer overflow-hidden h-full transform hover:rotate-1 hover:scale-[1.02]`}>
+      <div className={`absolute -top-6 -right-6 p-6 opacity-5 group-hover:opacity-30 transition-all ${accentClass} transform group-hover:scale-125`}>
         {icon}
       </div>
-      <div className="relative z-10 space-y-4">
-        <div className={`p-3 w-fit rounded-lg ${accentBgClass} ${accentClass} neon-glow-${accent.replace('island-', '')}`}>
+      <div className="relative z-10 space-y-6">
+        <div className={`p-4 w-fit rounded-none ${accentBgClass} ${accentClass} shadow-[4px_4px_0px_currentColor]`}>
           {icon}
         </div>
-        <h3 className="text-xl font-heading text-white group-hover:neon-text-cyan transition-all">{title}</h3>
-        <p className="text-sm text-foreground/70 font-body leading-relaxed">
+        <h3 className="text-2xl font-heading text-white group-hover:neon-text-cyan transition-all tracking-tight leading-none">{title}</h3>
+        <p className="text-base text-white/70 font-body leading-snug">
           {description}
         </p>
       </div>

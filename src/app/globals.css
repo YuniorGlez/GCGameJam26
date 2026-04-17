@@ -88,9 +88,54 @@ h1, h2, h3, h4, h5, h6 {
 
 @utility neon-pipe-text {
   color: #fff;
+  font-weight: 900;
   text-shadow: 
-    0 0 5px #fff,
-    0 0 10px #00B5E2,
-    0 0 20px #E52E8A;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    0 0 7px #fff,
+    0 0 10px #fff,
+    -2px -2px 0 #E52E8A,
+    2px 2px 0 #00B5E2;
+  letter-spacing: -0.05em;
+}
+
+@utility glitch-text {
+  position: relative;
+  text-shadow: 0.05em 0 0 #E52E8A, -0.025em -0.05em 0 #00B5E2,
+    0.025em 0.05em 0 #8DC63F;
+  animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #E52E8A, -0.025em -0.05em 0 #00B5E2,
+      0.025em 0.05em 0 #8DC63F;
+  }
+  14% {
+    text-shadow: 0.05em 0 0 #E52E8A, -0.025em -0.05em 0 #00B5E2,
+      0.025em 0.05em 0 #8DC63F;
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 #E52E8A, 0.025em 0.025em 0 #00B5E2,
+      -0.05em -0.05em 0 #8DC63F;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #E52E8A, 0.025em 0.025em 0 #00B5E2,
+      -0.05em -0.05em 0 #8DC63F;
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 #E52E8A, 0.05em 0 0 #00B5E2,
+      0 -0.05em 0 #8DC63F;
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 #E52E8A, 0.05em 0 0 #00B5E2,
+      0 -0.05em 0 #8DC63F;
+  }
+  100% {
+    text-shadow: -0.025em 0 0 #E52E8A, -0.025em -0.025em 0 #00B5E2,
+      -0.025em -0.05em 0 #8DC63F;
+  }
+}
+
+@utility poster-card {
+  @apply glass-panel bg-white/5 border-white/10;
+  box-shadow: 10px 10px 0px rgba(0, 181, 226, 0.2);
 }
