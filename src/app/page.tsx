@@ -4,24 +4,24 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="relative island-gradient min-h-screen overflow-hidden">
-      {/* Decorative "Pixels" from branding */}
-      <div className="absolute top-20 left-[10%] w-4 h-4 bg-island-cyan animate-pulse shadow-[0_0_15px_rgba(0,181,226,0.8)] rotate-45" />
-      <div className="absolute top-40 right-[15%] w-3 h-3 bg-island-lime animate-bounce shadow-[0_0_10px_rgba(141,198,63,0.8)]" />
-      <div className="absolute bottom-20 left-[20%] w-5 h-5 bg-island-magenta opacity-50 shadow-[0_0_20px_rgba(229,46,138,0.8)] -rotate-12" />
-      
+    <main className="relative min-h-screen overflow-hidden">
       <div className="container mx-auto px-4 py-12 flex flex-col items-center relative z-10">
         {/* Hero Section */}
-        <section className="text-center mb-16 space-y-6 max-w-3xl">
-          <div className="inline-block px-4 py-1.5 bg-island-cyan/10 border border-island-cyan/30 rounded-full text-island-cyan text-xs font-heading mb-4 neon-glow-cyan tracking-widest">
+        <section className="text-center mb-16 space-y-8 max-w-4xl">
+          <div className="inline-block px-4 py-1.5 bg-island-cyan/10 border border-island-cyan/30 rounded-full text-island-cyan text-xs font-heading mb-4 neon-glow-cyan tracking-widest animate-pulse">
             GRAN CANARIA GAME ISLAND JAM 2026
           </div>
-          <h1 className="text-5xl md:text-8xl font-heading leading-tight bg-clip-text text-transparent bg-gradient-to-r from-island-cyan via-white to-island-magenta drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            Island Jam <br /> <span className="text-island-lime neon-text-lime italic">Copilot</span>
-          </h1>
-          <p className="text-foreground/80 font-body text-lg max-w-xl mx-auto border-l-2 border-island-magenta pl-4 py-2 bg-island-magenta/5">
-            IA Multimodal para equipos de alto rendimiento. <br/>
-            <span className="text-island-cyan">Optimizado para el crunch de 48 horas.</span>
+          
+          <div className="relative">
+            <h1 className="text-6xl md:text-9xl font-heading leading-none neon-pipe-text tracking-tighter">
+              ISLAND JAM<br />
+              <span className="text-island-lime italic block mt-2 drop-shadow-lg">COPILOT</span>
+            </h1>
+          </div>
+
+          <p className="text-xl md:text-2xl font-body text-white/80 max-w-2xl mx-auto border-y border-white/10 py-6 px-4 bg-white/5 backdrop-blur-sm">
+            ¿Eres capaz de crear un videojuego en <span className="text-island-magenta font-bold underline decoration-island-magenta/50">48 horas</span>? <br/>
+            <span className="text-island-cyan text-base md:text-lg mt-2 block opacity-70 italic tracking-wide">IA Multimodal para equipos de alto rendimiento.</span>
           </p>
         </section>
 

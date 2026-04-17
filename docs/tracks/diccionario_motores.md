@@ -15,4 +15,4 @@ Implementar un módulo que permita traducir conceptos técnicos entre diferentes
 - [x] Creación de Página Frontend.
 - [x] Actualización de Dashboard.
 - [x] Validación con TSC.
-- [ ] Git Actions (Add, Commit, Push).
+- [x] Git Actions (Add, Commit, Push).

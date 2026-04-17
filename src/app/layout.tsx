@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Orbitron, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+import { BackgroundDecorations } from "@/components/ui/BackgroundDecorations";
+
 const orbitron = Orbitron({
   subsets: ["latin"],
   variable: "--font-orbitron",
@@ -36,14 +38,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
-      <body className={`${orbitron.variable} ${jetbrains.variable} antialiased relative`}>
+      <body className={`${orbitron.variable} ${jetbrains.variable} antialiased relative island-gradient overflow-x-hidden`}>
         {/* Official Background Overlay */}
         <div 
-          className="fixed inset-0 z-0 pointer-events-none opacity-[0.07] bg-center bg-cover bg-no-repeat"
+          className="fixed inset-0 z-0 pointer-events-none opacity-[0.05] bg-center bg-cover bg-no-repeat grayscale-[0.5]"
           style={{ backgroundImage: 'url("/gcgamejam26.webp")' }}
         />
         
-        <div className="relative z-10 min-h-screen bg-background/90 text-foreground selection:bg-island-magenta selection:text-white">
+        <BackgroundDecorations />
+        
+        <div className="relative z-10 min-h-screen text-foreground selection:bg-island-magenta selection:text-white">
           {children}
         </div>
       </body>
