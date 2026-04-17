@@ -27,7 +27,7 @@
 - [x] **Traductor a Lógica**: De lenguaje humano a pseudocódigo.
 - [x] **Diccionario entre Motores**: Equivalencias Unity/Godot/Unreal.
 - [x] **El Pato de Goma Interactivo**: Chat de debug por auto-explicación.
-- [ ] **Checklist de Rendimiento**: Optimización para Web builds.
+- [x] **Checklist de Rendimiento**: Optimización para Web builds.
 
 ### Estética y Finalización
 - [ ] **Buscador de Colores**: Paletas según sentimiento.

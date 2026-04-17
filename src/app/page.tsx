@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors, Hammer, AlertTriangle, ShoppingCart, Code, MessageSquare, Gauge } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -179,6 +179,14 @@ export default function Home() {
                   description="Chat de debug por auto-explicación."
                   icon={<MessageSquare className="w-6 h-6" />}
                   accent="island-cyan"
+                />
+              </Link>
+              <Link href="/checklist-rendimiento">
+                <ModuleCard
+                  title="Checklist Rendimiento"
+                  description="Optimiza tu build para la entrega final."
+                  icon={<Gauge className="w-6 h-6" />}
+                  accent="island-lime"
                 />
               </Link>
             </div>
