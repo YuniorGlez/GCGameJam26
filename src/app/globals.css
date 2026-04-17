@@ -4,26 +4,27 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  --color-island-blue: #2563EB;
-  --color-island-neon: #3B82F6;
-  --color-island-orange: #F97316;
-  --color-island-dark: #0F172A;
+  --color-island-cyan: #00B5E2;
+  --color-island-magenta: #E52E8A;
+  --color-island-lime: #8DC63F;
+  --color-island-dark: #0B1E4D;
+  --color-island-abyss: #050C1F;
   
   --font-heading: var(--font-orbitron);
   --font-body: var(--font-jetbrains);
 }
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #1E293B;
+  --background: #0B1E4D;
+  --foreground: #F8FAFC;
   --font-orbitron: "Orbitron", sans-serif;
   --font-jetbrains: "JetBrains Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0F172A;
-    --foreground: #F8FAFC;
+    --background: #F8FAFC;
+    --foreground: #0B1E4D;
   }
 }
 
@@ -42,10 +43,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Jam Mode - Custom Utilities */
-@utility neon-glow {
-  box-shadow: 0 0 10px var(--color-island-neon), 0 0 20px var(--color-island-neon);
+@utility neon-glow-cyan {
+  box-shadow: 0 0 10px var(--color-island-cyan), 0 0 20px rgba(0, 181, 226, 0.4);
 }
 
-@utility neon-text {
-  text-shadow: 0 0 5px var(--color-island-neon);
+@utility neon-glow-magenta {
+  box-shadow: 0 0 10px var(--color-island-magenta), 0 0 20px rgba(229, 46, 138, 0.4);
+}
+
+@utility neon-text-cyan {
+  text-shadow: 0 0 5px var(--color-island-cyan);
+}
+
+@utility neon-text-magenta {
+  text-shadow: 0 0 5px var(--color-island-magenta);
+}
+
+@utility glass-panel {
+  background: rgba(11, 30, 77, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 181, 226, 0.2);
+}
+
+@utility island-gradient {
+  background: linear-gradient(135deg, #0B1E4D 0%, #220D45 50%, #050C1F 100%);
 }

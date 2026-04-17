@@ -16,15 +16,13 @@
 
 ### Color Palette
 
-| Role | Hex | CSS Variable |
-|------|-----|--------------|
-| Primary | `#2563EB` | `--color-primary` |
-| Secondary | `#3B82F6` | `--color-secondary` |
-| CTA/Accent | `#F97316` | `--color-cta` |
-| Background | `#F8FAFC` | `--color-background` |
-| Text | `#1E293B` | `--color-text` |
+| Primary | `#00B5E2` | `--color-primary` |
+| Secondary | `#E52E8A` | `--color-secondary` |
+| CTA/Accent | `#8DC63F` | `--color-cta` |
+| Background | `#0B1E4D` | `--color-background` |
+| Text | `#F8FAFC` | `--color-text` |
 
-**Color Notes:** Neon red+blue on dark + score green
+**Color Notes:** Vibrant Neon Island aesthetic. Primary is Electric Cyan, Secondary is Neon Magenta, Accent is Toxic Lime. Background is a deep ocean abyss blue.
 
 ### Typography
 

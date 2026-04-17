@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <body className={`${orbitron.variable} ${jetbrains.variable} antialiased`}>
-        <div className="min-h-screen bg-background text-foreground selection:bg-island-orange selection:text-white">
+        <div className="min-h-screen bg-background text-foreground selection:bg-island-magenta selection:text-white">
           {children}
         </div>
       </body>
