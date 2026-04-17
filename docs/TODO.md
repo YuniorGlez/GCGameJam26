@@ -18,7 +18,7 @@
 - [x] **Inspiración por Restricción**: Forzar creatividad con límites.
 
 ### Gestión y Alcance
-- [ ] **Tijeretazo Maestro**: Qué eliminar cuando no hay tiempo.
+- [x] **Tijeretazo Maestro**: Qué eliminar cuando no hay tiempo.
 - [ ] **Arquitecto del MVP**: Las 3 mecánicas sagradas.
 - [ ] **Medidor de Marrones**: Dificultad técnica vs tiempo.
 - [ ] **Lista de la Compra (Assets)**: Inventario mínimo de arte/audio.

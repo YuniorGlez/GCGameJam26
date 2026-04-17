@@ -1,5 +1,5 @@
 import { Countdown } from "@/components/ui/Countdown";
-import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale } from "lucide-react";
+import { Zap, Map, LifeBuoy, BookOpen, Clock, Sparkles, PlusCircle, Scale, Scissors } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -85,7 +85,7 @@ export default function Home() {
             <h2 className="text-2xl font-heading text-island-lime flex items-center gap-3">
               <Map className="w-6 h-6" /> Fase 2: Alcance y Realidad
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link href="/roadmap">
                 <ModuleCard
                   title="Roadmap 48h"
@@ -100,6 +100,14 @@ export default function Home() {
                   description="Añade una regla disruptiva para destacar."
                   icon={<Zap className="w-6 h-6" />}
                   accent="island-magenta"
+                />
+              </Link>
+              <Link href="/tijeretazo-maestro">
+                <ModuleCard
+                  title="Tijeretazo Maestro"
+                  description="Qué eliminar cuando no hay tiempo. Prioridad absoluta."
+                  icon={<Scissors className="w-6 h-6" />}
+                  accent="island-cyan"
                 />
               </Link>
             </div>
