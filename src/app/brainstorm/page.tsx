@@ -20,33 +20,25 @@ export default function BrainstormPage() {
   const generateConcepts = async () => {
     if (!theme) return;
     setLoading(true);
+    setConcepts([]);
     
-    // Simulación de latencia de Gemini 3.0 Flash (< 2s)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    const mockConcepts: Concept[] = [
-      {
-        title: `${theme}: Chrono-Shift`,
-        genre: "Puzzle Platformer",
-        hook: "El tiempo solo avanza cuando te mueves en círculos.",
-        mechanic: "Bucle temporal de 5 segundos grabable.",
-      },
-      {
-        title: "Project Island",
-        genre: "Action Roguelike",
-        hook: "Cada enemigo derrotado cambia el color de la isla y tus habilidades.",
-        mechanic: "Sistema de sinergia elemental basado en la paleta de colores.",
-      },
-      {
-        title: "Spirit of the Jam",
-        genre: "Atmospheric Adventure",
-        hook: "Eres un espíritu que solo puede interactuar con objetos del tema.",
-        mechanic: "Posesión de objetos con físicas destructibles.",
-      },
-    ];
-    
-    setConcepts(mockConcepts);
-    setLoading(false);
+    try {
+      const response = await fetch("/api/brainstorm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ theme }),
+      });
+
+      if (!response.ok) throw new Error("Error en la generación");
+
+      const data = await response.json();
+      setConcepts(data.concepts);
+    } catch (error) {
+      console.error("Error:", error);
+      // Fallback simple si la API falla
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
